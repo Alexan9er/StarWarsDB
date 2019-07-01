@@ -7,11 +7,12 @@
 
 .planet-image {
   width: 200px;
+  border-radius: 8px;
 }
 
 .list-group-flush li {
   background: none;
-  padding: 7px 0;
+  padding: 3px 0;
 }
 
 .random-planet-desc {
