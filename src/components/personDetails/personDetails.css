@@ -1,0 +1,21 @@
+.person-details {
+  background-color: #373d4429;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.person-image {
+  width: 200px;
+}
+
+.list-group-flush .list-group-item {
+  display: flex;
+}
+
+.list-group-item .term {
+  color: #5b6073;
+  min-width: 200px;
+  margin-right: 20px;
+}
