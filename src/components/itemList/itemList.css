@@ -6,3 +6,12 @@
   background-color: #373d4429;
   border: none;
 }
+
+.item-list .list-group-item {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item-list .list-group-item:hover {
+  background-color: #474d5338;
+}

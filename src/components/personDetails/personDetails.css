@@ -8,6 +8,7 @@
 
 .person-image {
   width: 200px;
+  border-radius: 7px;
 }
 
 .list-group-flush .list-group-item {
