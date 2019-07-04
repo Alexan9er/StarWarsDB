@@ -5,8 +5,14 @@ import RandomPlanet from '../randomPlanet';
 import ErrorButton from '../errorButton';
 import ErrorIndicator from '../errorIndicator';
 import PeoplePage from '../peoplePage/peoplePage';
+import ItemList from '../itemList';
+import PersonDetails from '../personDetails';
+
+import SwapiService from '../../services/SwapiService';
 
 export default class App extends Component {
+  swapiServer = new SwapiService();
+
   constructor() {
     super();
     this.state = {
@@ -32,8 +38,6 @@ export default class App extends Component {
         <RandomPlanet />
         <ErrorButton />
 
-        <PeoplePage />
-        <PeoplePage />
         <PeoplePage />
       </div>
     );
