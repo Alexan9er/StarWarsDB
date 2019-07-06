@@ -10,6 +10,8 @@ import PeoplePage from '../peoplePage/peoplePage';
 import SwapiService from '../../services/SwapiService';
 import Row from '../row';
 
+import { SwapiServiceProvider } from '../swServiceContext';
+
 import {
   PersonList,
   StarshipList,
@@ -20,7 +22,7 @@ import {
 } from '../sw-components';
 
 export default class App extends Component {
-  swapiServer = new SwapiService();
+  swapiService = new SwapiService();
 
   constructor() {
     super();
@@ -29,25 +31,29 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <Header />
-        {/* <RandomPlanet />
+      <ErrorBoundary>
+        <SwapiServiceProvider value={this.swapiService}>
+          <div className="container">
+            <Header />
+            {/* <RandomPlanet />
         <ErrorButton /> */}
 
-        {/* <PeoplePage /> */}
+            {/* <PeoplePage /> */}
 
-        <PersonDetails itemId={11} />
-        <PlanetDetails itemId={8} />
-        <StarshipDetails itemId={11} />
+            <PersonDetails itemId={11} />
+            <PlanetDetails itemId={8} />
+            <StarshipDetails itemId={11} />
 
-        <PersonList />
-        <StarshipList />
-        <PlanetList />
+            <PersonList />
+            <StarshipList />
+            <PlanetList />
 
-        {/* <ErrorBoundary>
+            {/* <ErrorBoundary>
           <Row left={personDetails} right={starshipDetails} />
         </ErrorBoundary> */}
-      </div>
+          </div>
+        </SwapiServiceProvider>
+      </ErrorBoundary>
     );
   }
 }
