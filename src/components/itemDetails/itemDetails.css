@@ -1,4 +1,4 @@
-.person-details {
+.item-details {
   background-color: #373d4429;
   padding: 20px;
   display: flex;
@@ -6,9 +6,10 @@
   flex-direction: row;
 }
 
-.person-image {
+.item-image {
   width: 200px;
   border-radius: 7px;
+  height: 100%;
 }
 
 .list-group-flush .list-group-item {

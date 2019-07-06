@@ -3,42 +3,50 @@ import Header from '../header';
 import RandomPlanet from '../randomPlanet';
 
 import ErrorButton from '../errorButton';
-import ErrorIndicator from '../errorIndicator';
+import ErrorBoundary from '../errorBoundary';
+
 import PeoplePage from '../peoplePage/peoplePage';
-import ItemList from '../itemList';
-import PersonDetails from '../personDetails';
 
 import SwapiService from '../../services/SwapiService';
+import Row from '../row';
+
+import {
+  PersonList,
+  StarshipList,
+  PlanetList,
+  PersonDetails,
+  PlanetDetails,
+  StarshipDetails,
+} from '../sw-components';
 
 export default class App extends Component {
   swapiServer = new SwapiService();
 
   constructor() {
     super();
-    this.state = {
-      hasError: false,
-    };
-  }
-
-  componentDidCatch() {
-    this.setState({ hasError: true });
+    this.state = {};
   }
 
   render() {
-    if (this.state.hasError) {
-      return (
-        <div className="container">
-          <ErrorIndicator />
-        </div>
-      );
-    }
     return (
       <div className="container">
         <Header />
-        <RandomPlanet />
-        <ErrorButton />
+        {/* <RandomPlanet />
+        <ErrorButton /> */}
 
-        <PeoplePage />
+        {/* <PeoplePage /> */}
+
+        <PersonDetails itemId={11} />
+        <PlanetDetails itemId={8} />
+        <StarshipDetails itemId={11} />
+
+        <PersonList />
+        <StarshipList />
+        <PlanetList />
+
+        {/* <ErrorBoundary>
+          <Row left={personDetails} right={starshipDetails} />
+        </ErrorBoundary> */}
       </div>
     );
   }
