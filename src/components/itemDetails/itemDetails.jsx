@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Spinner from '../spinner';
 
 import './itemDetails.css';
@@ -72,3 +73,14 @@ export default class ItemDetails extends Component {
     return <div className="item-details card">{content}</div>;
   }
 }
+
+ItemDetails.propTypes = {
+  itemId: PropTypes.number,
+  children: PropTypes.node.isRequired,
+  getData: PropTypes.func.isRequired,
+  getImageUrl: PropTypes.func.isRequired,
+};
+
+ItemDetails.defaultProps = {
+  itemId: null,
+};
