@@ -1,6 +1,12 @@
 # Star Wars DB
 
-This project was created specifically to learn how to work better with the [react](https://en.reactjs.org/).
+#### You can watch the [demo](https://codesandbox.io/s/github/Alexan9er/StarWarsDB)
+
+![Screenshot_1](https://user-images.githubusercontent.com/48125634/60868549-f7733600-a235-11e9-831a-9e9cb86875d8.jpg)
+
+This project was created specifically to learn how to work better with the [react](https://en.reactjs.org/) and API.
+
+This project works on the basis of the [Star Wars API server](https://swapi.co/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
