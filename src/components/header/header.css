@@ -40,3 +40,15 @@
 .header-menu-item a:hover {
   color: #fff;
 }
+
+@media (max-width: 576px) {
+  .header-menu-item {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    padding: 20px 0px 20px 0;
+  }
+}
